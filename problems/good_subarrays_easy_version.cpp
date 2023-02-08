@@ -16,7 +16,7 @@ void solve(std::vector<int>& v) {
             index++;
         } else {
             count+=computeCount(index-1);
-            int diff = std::abs(v[e] - index);
+            int diff = index - v[e];
             s+=diff;
             count-= computeCount((e - s));
             index = (e - s) + 1;
